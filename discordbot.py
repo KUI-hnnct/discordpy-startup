@@ -15,11 +15,4 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
     
-@bot.event
-async def on_message(message):
-    if message.auther.bot:
-        return
-    if message.content == 'OP':
-    await message.channel.send('YEEEEEEEEEEEE!!')
-    
 bot.run(token)

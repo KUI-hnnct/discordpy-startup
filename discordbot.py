@@ -4,8 +4,6 @@ import traceback
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-
-Y = "YEEEEEEEEEEEE!!"
     
 @bot.event
 async def on_command_error(ctx, error):
@@ -20,6 +18,7 @@ async def ping(ctx):
     
 @bot.command()
 async def OP(melon):
+    Y = "YEEEEEEEEEEEE!!"
     await melon.send('Y')
     
 bot.run(token)

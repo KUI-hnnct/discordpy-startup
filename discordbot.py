@@ -18,10 +18,10 @@ async def ping(ctx):
     await ctx.send('pong')
 
 @client.event
-async def on_message(melon):
+async def on_message(message):
     if message.content.startswith("OP"):
         O='YEEEEEEEE!!!'
-    await client.send_message(O)
+    await client.send_message(message.channel,O)
     
 
 bot.run(token)

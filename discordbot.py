@@ -19,7 +19,7 @@ async def ping(ctx):
     await ctx.send('pong')
     
 @bot.command()
-async def "OP"(melon):
+async def OP(melon):
     await melon.send('Y')
     
 bot.run(token)

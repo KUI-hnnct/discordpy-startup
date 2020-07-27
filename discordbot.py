@@ -14,7 +14,7 @@ async def on_command_error(ctx, error):
 async def on_message(message):
     if message.auther.bot:
         return
-    if message.content == 'OP':
+    if message.content.startswith("OP"):
         await message.channel.send('YEEEEEEEEEE!!')
 
 @bot.command()

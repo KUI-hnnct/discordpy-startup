@@ -17,5 +17,9 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
 
+@client.event
+async def OPPAI(OP):
+    await OP.send('YEEEEEEEE!!!')
+    
 
 bot.run(token)

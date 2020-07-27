@@ -1,26 +1,12 @@
 from discord.ext import commands
 import os
 import traceback
-import discord
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-client = discord.Client()
 
-@client.event
-async def on_ready():
-    print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('------')
+Y = "YEEEEEEEEEEEE!!"
     
-@client.event
-async def on_message(message):
-    if message.content.startswith("OP"):
-        if client.user != message.auther:
-            O = "YEEEEEEEE!!"
-            await message.channel.send(O)
-        
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
@@ -31,5 +17,9 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
+    
+@bot.command()
+async def "OP"(melon):
+    await melon.send('Y')
     
 bot.run(token)

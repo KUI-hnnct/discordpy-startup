@@ -11,6 +11,7 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
     
+@client.event
 async def on_message(message):
     if message.auther.bot:
         return

@@ -17,7 +17,10 @@ async def ping(ctx):
     await ctx.send('pong')
     
 @bot.command()
-async def OP(melon):
-    await melon.send('YEEEEEEEEEEEE!!')
+async def on_message(message):
+    if message.auther.bot:
+        return
+    if message.content == 'OP':
+    await message.channel.send('YEEEEEEEEEEEE!!')
     
 bot.run(token)

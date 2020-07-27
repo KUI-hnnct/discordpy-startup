@@ -17,8 +17,8 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
 
-@bot.command()
-async def OP(melon):
+@client.event
+async def on_message(melon):
     await melon.send('YEEEEEEEE!!!')
     
 
